@@ -1,37 +1,56 @@
+#   -------------------------------
+#   1.  USER
+#   -------------------------------
 [user]
     name = Will
     email = will@coefficientinc.com
+
+#   -------------------------------
+#   2.  ALIAS
+#   -------------------------------
+
 [alias]
-    # basic shit
-    c = commit -m
-    a = add
+    # status
     s = status
+
+    # adding files
+    a = add
+
+    # committing
+    c = commit -m
+    xa = commit -a -m
+    amend = commit --amend -m
+
+    # branches
     f = fetch
     br = branch
     co = checkout
-    xa = commit -a -m
-    amend = commit --amend
+    master = checkout master
 
     # pushing and pulling
     pu = push origin
     pl = pull origin
-    master = checkout master
 
     # will put a file into gitignore
     ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 
     # misc
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-    # h = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an>%Creset' --abbrev-commit --
 
     # For when you fuck up
     remove-last = reset --soft HEAD~1
     remove-last-hard = reset --hard HEAD~1
 
-    # Will start a repo in this directory
+    # Will start a repo in the current directory
     this = !git init && git add . && git commit -m \"initial commit\"
 
     # list aliases
     alias = config --get-regexp alias
+
+#   -------------------------------
+#   3.  COLOR
+#   -------------------------------
+
 [color]
     ui = true
+

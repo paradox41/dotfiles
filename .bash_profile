@@ -144,8 +144,9 @@ alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit
 alias apacheRestart='sudo apachectl graceful'           # apacheRestart:    Restart Apache
 alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file
 alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
-alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs
+alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:       Shows apache error logs
 httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
+serve() { python -m 'SimpleHTTPServer' $@ ; }           # serve:            Starts a simple python webserver at the given port
 
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------

@@ -3,8 +3,8 @@
 #   -------------------------------
 
 # Add system directory to PATH
-# export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/local/node/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+# export PATH=$HOME/local/node/bin:/usr/local/bin:$PATH
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -72,6 +72,40 @@ alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden 
 alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)
 alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
 alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
+
+del() {
+    RED="\e[31m"
+    YELLOW="\e[33m"
+    WHITE="\e[97m"
+
+    if [[ $# -eq 0 ]] ; then
+        echo -e "Sorry dude, I can't do anything with that. Nothing specified."
+    else
+        echo  -ne "${YELLOW}You're about to move the following items to the trash:${RED}\n > $*\n${YELLOW}Are you sure? [y/n] "
+        read answer
+        finish="-1"
+    while [ "$finish" = '-1' ]
+    do
+        finish="1"
+        if [ "$answer" = '' ];
+        then
+            answer=""
+        else
+        case $answer in
+            y | Y | yes | YES )
+                echo "$reset_color"
+                mv -v $* $HOME/.Trash/;
+                answer="y";
+                ;;
+            n | N | no | NO ) answer="n";;
+            *) finish="-1";
+                echo -n '\nInvalid response -- please reenter:';
+                read answer;;
+            esac
+        fi
+    done
+    fi
+}
 
 #   ---------------------------
 #   4.  SEARCHING

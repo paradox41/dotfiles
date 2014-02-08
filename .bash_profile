@@ -18,20 +18,22 @@ export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
 # Default editor
 # export EDITOR='sublime'
 
+# Load bash_prompt always
+[[ -s ~/.bash_prompt ]] && source ~/.bash_prompt
+
 #   -------------------------------
 #   2.  ALIASES
 #   -------------------------------
 
 ## Colors in ls
 # -G - enable colors
-alias ls="ls -laG"
-alias ll="ls -lh"
+# alias ls="ls -laG"
+# alias ll="ls -lh"
 alias la="ls -a"
-alias l="ls"
-alias c="clear"
+alias l="ls -aG"
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
-cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
+cd() { builtin cd "$@"; l; }                # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
@@ -52,6 +54,7 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+alias refresh='source ~/.bash_profile'      # reload the bash profile
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------

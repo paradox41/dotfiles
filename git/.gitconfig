@@ -26,6 +26,8 @@
     br = branch
     co = checkout
     master = checkout master
+    # Switch to a branch, creating it if necessary
+    go = checkout -B
 
     # pushing and pulling
     pu = push origin

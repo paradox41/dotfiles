@@ -193,6 +193,7 @@ httpDebug () {
 #   ---------------------------------------
 
 alias makeitso='vagrant up && vagrant ssh'              # start vagrant and ssh in
+alias shutupwesley='vagrant halt'                       # stop vagrant
 
 #   ---------------------------
 #   8.  PROCESS MANAGEMENT

@@ -192,8 +192,8 @@ httpDebug () {
 #   7.  VAGRANT
 #   ---------------------------------------
 
-alias makeitso='vagrant up && vagrant ssh && source ~/.bash_profile && cd /vagrant' # start vagrant, ssh in, source .bash_profile and cd into /vagrant
-alias shutupwesley='vagrant halt'                                                   # stop vagrant
+alias makeitso='vagrant up && vagrant ssh'  # start vagrant, ssh in
+alias shutupwesley='vagrant halt'           # stop vagrant
 
 #   ---------------------------
 #   8.  PROCESS MANAGEMENT

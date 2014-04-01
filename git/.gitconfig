@@ -31,7 +31,7 @@
 
     # pushing and pulling
     pu = push origin
-    pl = pull origin
+    pl = pull --rebase origin
 
     # will put a file into gitignore
     ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore

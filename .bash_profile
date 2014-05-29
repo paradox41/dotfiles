@@ -3,7 +3,8 @@
 #   -------------------------------
 
 # Add system directory to PATH
-export PATH=/usr/local/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
+export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 # export PATH=$HOME/local/node/bin:/usr/local/bin:$PATH
 
 # Load RVM into a shell session *as a function*
@@ -16,7 +17,7 @@ export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
 # source ~/local/node/lib/node_modules/npm/lib/utils/completion.sh
 
 # Default editor
-# export EDITOR='sublime'
+export EDITOR='subl -w'
 
 # Load bash_prompt always
 [[ -s ~/.bash_prompt ]] && source ~/.bash_prompt
@@ -192,8 +193,9 @@ httpDebug () {
 #   7.  VAGRANT
 #   ---------------------------------------
 
-alias makeitso='vagrant up && vagrant ssh'  # start vagrant, ssh in
-alias shutupwesley='vagrant halt'           # stop vagrant
+alias makeitso='vagrant up && vagrant ssh'                               # start vagrant, ssh in
+alias gotowork="cd development/panel && workon panel && python run.py"   # get to work
+alias shutupwesley='vagrant halt'                                        # stop vagrant
 
 #   ---------------------------
 #   8.  PROCESS MANAGEMENT
@@ -229,6 +231,5 @@ alias shutupwesley='vagrant halt'           # stop vagrant
 
 #   my_ps: List processes owned by my user:
 #   ------------------------------------------------------------
-    my_ps() {
-        ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ;
-    }
+    my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
+export PATH=/usr/local/sbin:$PATH

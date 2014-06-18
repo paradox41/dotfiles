@@ -194,7 +194,6 @@ httpDebug () {
 #   ---------------------------------------
 
 alias makeitso='vagrant up && vagrant ssh'                               # start vagrant, ssh in
-alias gotowork="cd development/panel && workon panel && python run.py"   # get to work
 alias shutupwesley='vagrant halt'                                        # stop vagrant
 
 #   ---------------------------

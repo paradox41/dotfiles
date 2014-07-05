@@ -1,11 +1,11 @@
-#   -------------------------------
-#   1.  MISC
-#   -------------------------------
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
 
-# Add system directory to PATH
-# export PATH=/usr/local/bin:$PATH
-export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
-# export PATH=$HOME/local/node/bin:/usr/local/bin:$PATH
+# Load the shell dotfiles, and then some:
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -22,53 +22,10 @@ export EDITOR='subl -w'
 # Load bash_prompt always
 [[ -s ~/.bash_prompt ]] && source ~/.bash_prompt
 
-#   -------------------------------
-#   2.  ALIASES
-#   -------------------------------
 
-## Colors in ls
-# -G - enable colors
-# alias ls="ls -laG"
-# alias ll="ls -lh"
-alias la="ls -a"
-alias l="ls -aG"
-
-alias cp='cp -iv'                           # Preferred 'cp' implementation
-cd() { builtin cd "$@"; l; }                # Always list directory contents upon 'cd'
-alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-alias ..='cd ../'                           # Go back 1 directory level
-alias ...='cd ../../'                       # Go back 2 directory levels
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'            # Go back 6 directory levels
-alias edit='sublime'                        # edit:         Opens any file in sublime editor
-alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
-alias ~="cd ~"                              # ~:            Go Home
-alias c='clear'                             # c:            Clear terminal display
-alias which='type -all'                     # which:        Find executables
-alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
-alias show_options='shopt'                  # Show_options: display bash options settings
-alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
-alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
-trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
-ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
-alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-alias refresh='source ~/.bash_profile'      # reload the bash profile
-
-#   lr:  Full Recursive Directory Listing
-#   ------------------------------------------
-
-alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-
-#   remind yourself of an alias (given some part of it)
-#   ------------------------------------------------------------
-
-showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
 
 #   -------------------------------
-#   3.  FILE AND FOLDER MANAGEMENT
+#   FILE AND FOLDER MANAGEMENT
 #   -------------------------------
 
 zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
@@ -112,7 +69,7 @@ del() {
 }
 
 #   ---------------------------
-#   4.  SEARCHING
+#   SEARCHING
 #   ---------------------------
 
 alias qfind="find . -name "                 # qfind:    Quickly search for file
@@ -126,7 +83,7 @@ ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name end
 spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 #   ---------------------------
-#   5.  NETWORKING
+#   NETWORKING
 #   ---------------------------
 
 alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
@@ -155,7 +112,7 @@ ii() {
 }
 
 #   ---------------------------------------
-#   6.  SYSTEMS OPERATIONS & INFORMATION
+#   SYSTEMS OPERATIONS & INFORMATION
 #   ---------------------------------------
 
 #   finderShowHidden:   Show hidden files in Finder
@@ -171,7 +128,7 @@ alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
 alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 #   ---------------------------------------
-#   7.  WEB DEVELOPMENT
+#   WEB DEVELOPMENT
 #   ---------------------------------------
 
 alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit httpd.conf
@@ -189,15 +146,8 @@ httpDebug () {
     /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ;
 }
 
-#   ---------------------------------------
-#   7.  VAGRANT
-#   ---------------------------------------
-
-alias makeitso='vagrant up && vagrant ssh'                               # start vagrant, ssh in
-alias shutupwesley='vagrant halt'                                        # stop vagrant
-
 #   ---------------------------
-#   8.  PROCESS MANAGEMENT
+#   PROCESS MANAGEMENT
 #   ---------------------------
 
 #   findPid: find out the pid of a specified process
@@ -231,4 +181,4 @@ alias shutupwesley='vagrant halt'                                        # stop 
 #   my_ps: List processes owned by my user:
 #   ------------------------------------------------------------
     my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
-export PATH=/usr/local/sbin:$PATH
+    export PATH=/usr/local/sbin:$PATH

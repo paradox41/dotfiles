@@ -19,6 +19,7 @@ brews=(
     'python'
     'htop-osx'
     'libxml2'
+    'ansible'
 );
 
 brew install ${brews[@]}

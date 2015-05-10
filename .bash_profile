@@ -31,11 +31,6 @@ ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the curr
 ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
 ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
 
-#   spotlight: Search for a file using MacOS Spotlight's metadata
-#   -----------------------------------------------------------
-
-spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
-
 #   ---------------------------
 #   NETWORKING
 #   ---------------------------
@@ -85,13 +80,9 @@ alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 #   WEB DEVELOPMENT
 #   ---------------------------------------
 
-alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit httpd.conf
-alias apacheRestart='sudo apachectl graceful'           # apacheRestart:    Restart Apache
 alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file
 alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
-alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:       Shows apache error logs
 httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
-serve() { python -m 'SimpleHTTPServer' $@ ; }           # serve:            Starts a simple python webserver at the given port
 
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------

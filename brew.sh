@@ -4,7 +4,7 @@ brew update
 
 echo 'Upgrading exisiting brews'
 # upgrade exisiting brews
-brew upgrade
+brew upgrade --all
 
 brews=(
     'gcc'

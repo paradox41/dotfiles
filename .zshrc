@@ -6,7 +6,7 @@ export ZSH=/Users/will/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="theunraveler"
-ZSH_THEME="awesomepanda"
+ZSH_THEME="pure"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,7 +46,7 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew git-extras npm pip virtualenvwrapper bgnotify)
+plugins=(git brew git-extras npm pip virtualenvwrapper bgnotify zsh-syntax-highlighting)
 
 # User configuration
 

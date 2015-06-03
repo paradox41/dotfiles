@@ -27,7 +27,7 @@ casks=(
     'iterm2'
     'sublime-text3'
     # irc
-    'limechat'
+    # 'limechat'
     # messaging
     'hipchat'
     'slack'
@@ -38,7 +38,7 @@ casks=(
     'google-chrome-beta'
     'google-chrome-canary'
     'firefox'
-    'chromium --force'
+    # 'chromium --force'
 );
 
 brew cask install ${casks[@]}

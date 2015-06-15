@@ -1,6 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/will/.oh-my-zsh
 
+# set editor
+export EDITOR='sublime'
+# grep options
+export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -102,3 +107,30 @@ alias c='clear'                             # c:            Clear terminal displ
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 alias refresh='source ~/.zshrc'             # reload zshrc
+
+#   -------------------------------
+#   KEYPAD FIX
+#   -------------------------------
+
+# Keypad
+# 0 . Enter
+bindkey -s "^[Op" "0"
+bindkey -s "^[Ol" "."
+bindkey -s "^[OM" "^M"
+# 1 2 3
+bindkey -s "^[Oq" "1"
+bindkey -s "^[Or" "2"
+bindkey -s "^[Os" "3"
+# 4 5 6
+bindkey -s "^[Ot" "4"
+bindkey -s "^[Ou" "5"
+bindkey -s "^[Ov" "6"
+# 7 8 9
+bindkey -s "^[Ow" "7"
+bindkey -s "^[Ox" "8"
+bindkey -s "^[Oy" "9"
+# + -  * /
+bindkey -s "^[Ok" "+"
+bindkey -s "^[Om" "-"
+bindkey -s "^[Oj" "*"
+bindkey -s "^[Oo" "/"

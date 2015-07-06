@@ -83,7 +83,6 @@ brews=(
     'scons'
     'sip'
     'spatialindex'
-    'suite-sparse'
     'swig'
     'tbb'
     'terminal-notifier'

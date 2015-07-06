@@ -68,7 +68,6 @@ brews=(
     'mercurial'
     'mpfr'
     'oniguruma'
-    'openblas'
     'openssl'
     'ossp-uuid'
     'pcre'

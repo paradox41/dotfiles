@@ -12,7 +12,7 @@ brews=(
     'automake'
     'bash'
     'bison'
-    'brew-cask'
+    'caskroom/cask/brew-cask'
     'ccat'
     'cloog'
     'cmake'

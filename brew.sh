@@ -2,6 +2,9 @@
 echo 'Updating brew'
 brew update
 
+echo 'Tap all the brews'
+brew tap dart-lang/dart
+
 echo 'Upgrading exisiting brews'
 # upgrade exisiting brews
 brew upgrade --all

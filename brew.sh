@@ -15,7 +15,6 @@ brews=(
     'automake'
     'bash'
     'bison'
-    'caskroom/cask/brew-cask'
     'ccat'
     'cloog'
     'cmake'

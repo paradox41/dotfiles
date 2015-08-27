@@ -2,7 +2,7 @@
 export ZSH=/Users/will/.oh-my-zsh
 
 # set editor
-export EDITOR='sublime'
+export EDITOR='subl'
 # grep options
 export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
 
@@ -134,3 +134,6 @@ bindkey -s "^[Ok" "+"
 bindkey -s "^[Om" "-"
 bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
+
+export NVM_DIR="/Users/will/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

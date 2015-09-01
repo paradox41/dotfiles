@@ -10,7 +10,6 @@ cmake
 coreutils
 curl
 dart
-dartium
 elixir
 erlang
 expat

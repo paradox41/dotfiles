@@ -34,7 +34,7 @@
     pl = pull --rebase origin
 
     # will put a file into gitignore
-    ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+    ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 
     # misc
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
@@ -50,7 +50,7 @@
     alias = config --get-regexp alias
     
     # remove files that have been gitignored AFTER they were added / committed
-    alias gri = ls-files --ignored --exclude-standard | xargs git rm
+    uncommit = ls-files --ignored --exclude-standard | xargs git rm
 
 #   -------------------------------
 #   3.  COLOR

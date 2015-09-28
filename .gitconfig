@@ -48,7 +48,7 @@
 
     # list aliases
     alias = config --get-regexp alias
-    
+
     # remove files that have been gitignored AFTER they were added / committed
     uncommit = ls-files --ignored --exclude-standard | xargs git rm
 

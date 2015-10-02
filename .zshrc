@@ -8,8 +8,6 @@ export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
 
 export NVM_DIR="/Users/will/.nvm"
 
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -63,6 +61,8 @@ export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

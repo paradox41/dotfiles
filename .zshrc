@@ -6,6 +6,10 @@ export EDITOR='subl'
 # grep options
 export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
 
+export NVM_DIR="/Users/will/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -51,7 +55,7 @@ ZSH_THEME="pure"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bgnotify zsh-syntax-highlighting virtualenvwrapper)
+plugins=(git bgnotify zsh-syntax-highlighting virtualenvwrapper sublime httpie vagrant)
 
 # User configuration
 
@@ -134,6 +138,3 @@ bindkey -s "^[Ok" "+"
 bindkey -s "^[Om" "-"
 bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
-
-export NVM_DIR="/Users/will/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

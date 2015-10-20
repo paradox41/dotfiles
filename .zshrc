@@ -8,6 +8,9 @@ export GREP_OPTIONS='--color=auto --exclude=*.pyc --exclude-dir=.git'
 
 export NVM_DIR="/Users/will/.nvm"
 
+# go
+export GOPATH=$HOME/Projects/go
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each

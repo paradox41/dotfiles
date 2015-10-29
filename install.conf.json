@@ -6,7 +6,7 @@
     "link": {
       "~/.gitconfig": "gitconfig",
       "~/.oh-my-zsh": "zsh/",
-      "~/.oh-my-zsh/custom/themes": "themes/",
+      "~/.oh-my-zsh/custom/themes": "custom/themes/",
       "~/.zsh": "zsh/",
       "~/.zshrc": "zshrc"
     },
@@ -14,6 +14,14 @@
       [
         "git submodule update --init --recursive",
         "Installing submodules"
+      ],
+      [
+        "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"",
+        "Installing Homebrew"
+      ],
+      [
+        "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash",
+        "Installing NVM"
       ]
     ]
   }

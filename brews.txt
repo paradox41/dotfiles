@@ -31,7 +31,6 @@ htop-osx
 httperf
 httpie
 icu4c
-iojs
 isl
 jpeg
 json-c

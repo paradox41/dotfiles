@@ -5,7 +5,6 @@
     ],
     "link": {
       "~/.gitconfig": "gitconfig",
-      "~/.oh-my-zsh": "zsh/",
       "~/.oh-my-zsh/custom/themes": "custom/themes/",
       "~/.zsh": "zsh/",
       "~/.zshrc": "zshrc"

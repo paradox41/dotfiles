@@ -1,0 +1,9 @@
+windows:
+  - name: app-template
+    root: ~/Projects/app-template
+    layout: even-vertical
+    panes:
+      - gulp
+      - commands:
+          - git status
+        focus: true

@@ -1,0 +1,9 @@
+windows:
+  - name: django-cms
+    root: ~/Projects/django-cms
+    layout: even-vertical
+    panes:
+      - vagrant up
+      - commands:
+          - git status
+        focus: true

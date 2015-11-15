@@ -1,0 +1,9 @@
+windows:
+  - name: app-template-typescript
+    root: ~/Projects/app-template-typescript
+    layout: even-vertical
+    panes:
+      - gulp
+      - commands:
+          - git status
+        focus: true

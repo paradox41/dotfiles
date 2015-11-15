@@ -6,3 +6,6 @@ source ~/.zsh/external.zsh
 
 # Aliases
 source ~/.zsh/aliases.zsh
+
+# Autocompletions
+source ~/.zsh/autocompletions.zsh

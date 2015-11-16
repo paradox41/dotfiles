@@ -3,7 +3,10 @@ windows:
     root: ~/Projects/app-template
     layout: even-vertical
     panes:
-      - gulp
       - commands:
-          - git status
+        - nvm use
+        - gulp
+      - commands:
+        - nvm use
+        - git status
         focus: true

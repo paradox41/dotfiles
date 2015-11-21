@@ -29,5 +29,9 @@ mcd() {
     mkdir -p "$1" && cd "$1";
 }
 
+update_all_the_things() {
+    upgrade_oh_my_zsh && brew update && brew upgrade --all && gem update
+}
+
 # reload zshrc
 alias refresh='source ~/.zshrc'

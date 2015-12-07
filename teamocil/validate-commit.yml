@@ -1,0 +1,10 @@
+windows:
+  - name: validate-commit
+    root: ~/Projects/validate-commit
+    layout: even-vertical
+    panes:
+      - commands:
+        - clear
+      - commands:
+        - git status
+        focus: true

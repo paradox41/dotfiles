@@ -1,0 +1,18 @@
+windows:
+  - name: kudos-frontend
+    root: ~/Projects/kudos-frontend
+    layout: tiled
+    panes:
+      - commands:
+        - gulp
+      - commands:
+        - git status
+        focus: true
+      - commands:
+        - cd ~/Projects/fdkudos
+        - bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+      - commands:
+        - cd ~/Projects/fdkudos
+        - bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+        - git status
+        - clear

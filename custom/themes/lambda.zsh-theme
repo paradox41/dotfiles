@@ -24,7 +24,7 @@ prompt_lambda_precmd() {
     # git info
     vcs_info
 
-    local prompt_lambda_preprompt="%F{green}%~%F{242}%f%F{magenta}:%F{magenta}$vcs_info_msg_0_`prompt_lamdba_git_dirty`%f "
+    local prompt_lambda_preprompt="%F{green}%~%f%F{magenta}:$vcs_info_msg_0_`prompt_lamdba_git_dirty`%f "
     print -P $prompt_lambda_preprompt
 
     # check async if there is anything to pull
@@ -44,9 +44,6 @@ prompt_lambda_precmd() {
             print -Pn "\e7\e[A\e[1G\e[`prompt_lambda_string_length $prompt_lambda_preprompt`C%F{cyan}${arrows}%f\e8"
         }
     } &!
-
-    # reset value since `preexec` isn't always triggered
-    # unset cmd_timestamp
 }
 
 prompt_lambda_setup() {

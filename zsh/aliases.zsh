@@ -20,9 +20,11 @@ alias .5='cd ../../../../../'
 # Go back 6 directory levels
 alias .6='cd ../../../../../../'
 # ~: Go Home
-alias ~="cd ~"
+alias ~='cd ~'
 # c: Clear terminal display
 alias c='clear'
+# start a docker shell
+alias docker-quickstart="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
 
 # mcd: Makes new Dir and jumps inside
 mcd() {

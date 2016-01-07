@@ -9,7 +9,6 @@ cloog
 cmake
 coreutils
 curl
-dart
 elixir
 erlang
 expat
@@ -60,7 +59,6 @@ oniguruma
 openssl
 ossp-uuid
 pcre
-phantomjs
 pkg-config
 proj
 pyqt

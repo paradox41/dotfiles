@@ -32,7 +32,7 @@ mcd() {
 }
 
 update_all_the_things() {
-    upgrade_oh_my_zsh && brew update && brew upgrade --all && gem update
+    upgrade_oh_my_zsh && brew update && brew upgrade --all && && brew cleanup
 }
 
 # reload zshrc

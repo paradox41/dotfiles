@@ -137,14 +137,14 @@ __git_status() {
 
 # Virtual environment.
 # Show current virtual environment (Python).
-__venv_status() {
-  # Check if the current directory running via Virtualenv
-  [ -n "$VIRTUAL_ENV" ] || return
-  echo -n " %Bvia%b "
-  echo -n "%{$fg_bold[blue]%}"
-  echo -n "$(basename $VIRTUAL_ENV)"
-  echo -n "%{$reset_color%}"
-}
+# __venv_status() {
+#   # Check if the current directory running via Virtualenv
+#   [ -n "$VIRTUAL_ENV" ] || return
+#   echo -n " %Bvia%b "
+#   echo -n "%{$fg_bold[blue]%}"
+#   echo -n "$(basename $VIRTUAL_ENV)"
+#   echo -n "%{$reset_color%}"
+# }
 
 # NVM
 # Show current version of node, exception system.
@@ -174,7 +174,7 @@ __return_status() {
 # PROMPT='
 # $(__host)$(__current_dir)$(__git_status)$(__nvm_status)$(__venv_status)
 # $(__return_status) '
-PROMPT='$(__host)$(__current_dir)$(__git_status)$(__venv_status)
+PROMPT='$(__host)$(__current_dir)$(__git_status)
 $(__return_status) '
 
 # Set PS2 - continuation interactive prompt

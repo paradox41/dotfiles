@@ -17,8 +17,8 @@
     a = add
 
     # committing
-    c = commit -m
-    xa = commit -a -m
+    c = commit -s -S -m
+    xa = commit -a -s -S -m
     amend = commit --amend -m
 
     # branches

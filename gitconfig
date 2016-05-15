@@ -52,6 +52,10 @@
     # remove files that have been gitignored AFTER they were added / committed
     uncommit = ls-files --ignored --exclude-standard | xargs git rm
 
+    # diff-so-fancy
+    # https://github.com/so-fancy/diff-so-fancy
+    dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+
 #   -------------------------------
 #   3.  COLOR
 #   -------------------------------

@@ -5,7 +5,9 @@ alias l="ls -aG"
 alias cp='cp -iv'
 
 # Always list directory contents upon 'cd'
-cd() { builtin cd "$@"; l; }
+cd() {
+    builtin cd "$@"; l;
+}
 
 # Go back 1 directory level
 alias ..='cd ../'
@@ -23,8 +25,16 @@ alias .6='cd ../../../../../../'
 alias ~='cd ~'
 # c: Clear terminal display
 alias c='clear'
-# start a docker shell
-alias docker-quickstart="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
+
+# Stop and Remove all containers
+docker_clean() {
+    docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+}
+
+# Remove all images
+docker_clean_images() {
+    docker rmi $(docker images -q);
+}
 
 # mcd: Makes new Dir and jumps inside
 mcd() {

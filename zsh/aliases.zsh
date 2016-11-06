@@ -42,7 +42,7 @@ mcd() {
 }
 
 update_all_the_things() {
-    upgrade_oh_my_zsh && brew update && brew upgrade --all && brew cleanup
+    upgrade_oh_my_zsh && brew update && brew upgrade && brew cleanup
 }
 
 # reload zshrc

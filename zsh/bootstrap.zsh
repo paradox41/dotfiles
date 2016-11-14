@@ -45,7 +45,7 @@ ZSH_THEME="odin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bgnotify zsh-syntax-highlighting virtualenvwrapper httpie gulp)
+plugins=(git bgnotify zsh-syntax-highlighting virtualenvwrapper httpie)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh

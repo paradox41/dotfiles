@@ -1,14 +1,8 @@
 echo 'Updating brew'
 brew update
 
-echo 'Tap all the brews'
-brew tap dart-lang/dart
-
-echo 'Install custom brews'
-brew install TomAnthony/brews/itermocil
-
 echo 'Upgrading exisiting brews'
-brew upgrade --all
+brew upgrade
 
 brews=($(cat brews.txt));
 

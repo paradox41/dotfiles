@@ -26,16 +26,6 @@ alias ~='cd ~'
 # c: Clear terminal display
 alias c='clear'
 
-# Stop and Remove all containers
-docker_clean() {
-    docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
-}
-
-# Remove all images
-docker_clean_images() {
-    docker rmi $(docker images -q);
-}
-
 # mcd: Makes new Dir and jumps inside
 mcd() {
     mkdir -p "$1" && cd "$1";

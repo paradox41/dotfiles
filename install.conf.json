@@ -18,6 +18,14 @@
       [
         "/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"",
         "Installing Homebrew"
+      ],
+      [
+        "./brew.sh",
+        "Installing brews"
+      ],
+      [
+        "./brew-cask.sh",
+        "Installing casks"
       ]
     ]
   }

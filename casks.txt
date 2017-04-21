@@ -16,7 +16,6 @@ haskell-platform
 hyper
 java
 kap
-licecap
 qlcolorcode
 qlmarkdown
 qlprettypatch

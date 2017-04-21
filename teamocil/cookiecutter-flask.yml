@@ -1,3 +1,0 @@
-windows:
-  - name: cookiecutter-flask
-    root: ~/Projects/cookiecutter-flask

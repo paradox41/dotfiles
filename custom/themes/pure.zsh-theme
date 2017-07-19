@@ -3,7 +3,7 @@
 # https://github.com/sindresorhus/pure
 # MIT License
 
-# Slightly modified by Will(paradox41)
+# Slightly modified by Will(willsoto)
 
 # For my own and others sanity
 # git:

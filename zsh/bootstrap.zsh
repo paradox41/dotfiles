@@ -45,7 +45,7 @@ ZSH_THEME="filthy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt bgnotify zsh-syntax-highlighting virtualenvwrapper)
+plugins=(git git-prompt zsh-syntax-highlighting virtualenvwrapper)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
@@ -70,7 +70,7 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
     source ~/.gnupg/.gpg-agent-info
     export GPG_AGENT_INFO
 else
-    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+    eval $(gpg-agent --daemon)
 fi
 
 if [ -f ~/.zshenv ]; then
